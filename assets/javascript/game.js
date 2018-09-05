@@ -27,7 +27,7 @@ $(document).ready(function () {
             name: "Goldie",
             healthPts: 180,
             attackPwr: 7,
-            imageUrl: "./assets/images/chihuahuaCrow.jpg",
+            imageUrl: "./assets/images/pinkPuppy.jpg",
             counterAttackPwr: 20,
         }
     }
@@ -35,6 +35,7 @@ $(document).ready(function () {
     var currentPlayer;
     var currentDefender;
     var enemies = [];
+    var indexofSelChar;
     var attackResult;
     var turnCounter = 1;
     var killCounter = 0;
@@ -53,7 +54,7 @@ $(document).ready(function () {
         if (makeChar == 'enemy') {
             $(charDiv).addClass('enemy');
         } else if (makeChar == 'defender') {
-            currDefender = character;
+            currentDefender = character;
             $(charDiv).addClass('target-enemy');
         }
     };
@@ -85,7 +86,7 @@ $(document).ready(function () {
             renderOne(charObj, areaRender, '');
             $('#attack-button').css('visibility', 'visible');
         }
-        //render combatants
+        //render enemies
         if (areaRender == '#available-to-attack-section') {
             $('#available-to-attack-section').prepend("Choose Your Next Opponent");
             for (var i = 0; i < charObj.length; i++) {
@@ -107,11 +108,11 @@ $(document).ready(function () {
         //render defender
         if (areaRender == '#defender') {
             $(areaRender).empty();
-            for (var i = 0; i < combatants.length; i++) {
+            for (var i = 0; i < enemies.length; i++) {
                 //add enemy to defender area
-                if (combatants[i].name == charObj) {
+                if (enemies[i].name == charObj) {
                     $('#defender').append("Your selected opponent")
-                    renderOne(combatants[i], areaRender, 'defender');
+                    renderOne(enemies[i], areaRender, 'defender');
                 }
             }
         }
@@ -140,17 +141,17 @@ $(document).ready(function () {
     $(document).on('click', '.character', function () {
         name = $(this).data('name');
         //if no player char has been selected
-        if (!currSelectedCharacter) {
-            currSelectedCharacter = characters[name];
+        if (!currentPlayer) {
+            currentPlayer = characters[name];
             for (var key in characters) {
                 if (key != name) {
-                    combatants.push(characters[key]);
+                    enemies.push(characters[key]);
                 }
             }
             $("#characters-section").hide();
-            renderCharacters(currSelectedCharacter, '#selected-character');
+            renderCharacters(currentPlayer, '#selected-character');
             //this is to render all characters for user to choose fight against
-            renderCharacters(combatants, '#available-to-attack-section');
+            renderCharacters(enemies, '#available-to-attack-section');
         }
     });
 
@@ -160,32 +161,32 @@ $(document).ready(function () {
         //if defernder area has enemy
         if ($('#defender').children().length !== 0) {
             //defender state change
-            var attackMessage = "You attacked " + currDefender.name + " for " + (currSelectedCharacter.attack * turnCounter) + " damage.";
+            var attackMessage = "You attacked " + currentDefender.name + " for " + (currentPlayer.attack * turnCounter) + " damage.";
             renderMessage("clearMessage");
             //combat
-            currDefender.health = currDefender.health - (currSelectedCharacter.attack * turnCounter);
+            currentDefender.health = currentDefender.health - (currentPlayer.attack * turnCounter);
 
             //win condition
-            if (currDefender.health > 0) {
+            if (currentDefender.health > 0) {
                 //enemy not dead keep playing
-                renderCharacters(currDefender, 'playerDamage');
+                renderCharacters(currentDefender, 'playerDamage');
                 //player state change
-                var counterAttackMessage = currDefender.name + " attacked you back for " + currDefender.enemyAttackBack + " damage.";
+                var counterAttackMessage = currentDefender.name + " attacked you back for " + currentDefender.enemyAttackBack + " damage.";
                 renderMessage(attackMessage);
                 renderMessage(counterAttackMessage);
 
-                currSelectedCharacter.health = currSelectedCharacter.health - currDefender.enemyAttackBack;
-                renderCharacters(currSelectedCharacter, 'enemyDamage');
-                if (currSelectedCharacter.health <= 0) {
+                currentPlayer.health = currentPlayer.health - currentDefender.enemyAttackBack;
+                renderCharacters(currentPlayer, 'enemyDamage');
+                if (currentPlayer.health <= 0) {
                     renderMessage("clearMessage");
                     restartGame("You have been defeated...GAME OVER!!!");
                     force.play();
                     $("#attack-button").unbind("click");
                 }
             } else {
-                renderCharacters(currDefender, 'enemyDefeated');
-                killCount++;
-                if (killCount >= 3) {
+                renderCharacters(currentDefender, 'enemyDefeated');
+                killCounter++;
+                if (killCounter >= 3) {
                     renderMessage("clearMessage");
                     restartGame("You Won!!!! GAME OVER!!!");
                     jediKnow.play();
