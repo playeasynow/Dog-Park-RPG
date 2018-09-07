@@ -1,2 +1,2 @@
-# unit-4-game
+# Dog Park RPG
 Unit 4 jQuery game!
