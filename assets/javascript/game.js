@@ -44,8 +44,6 @@ $(document).ready(function() {
     var currSelectedCharacter;
     var currDefender;
     var combatants = [];
-    var indexofSelChar;
-    var attackResult;
     var turnCounter = 1;
     var killCount = 0;
     
@@ -92,7 +90,7 @@ $(document).ready(function() {
         }
         // render player character
         if (areaRender === '#selected-character') {
-          $('#selected-character').prepend("Your Character");       
+          $('#selected-character').prepend("<span id='dogtitle'>Your Dog </span>");       
           renderOne(charObj, areaRender, '');
           $('#attack-button').css('visibility', 'visible');
         }
@@ -141,7 +139,7 @@ $(document).ready(function() {
         // render defeated enemy
         if (areaRender === 'enemyDefeated') {
           $('#defender').empty();
-          var gameStateMessage = "You have defated " + charObj.name + ", you can choose to fight another enemy.";
+          var gameStateMessage = "You have defeated " + charObj.name + ", you can choose to fight another doggy.";
           renderMessage(gameStateMessage);
           dogLoses.play();
         }
@@ -198,7 +196,7 @@ $(document).ready(function() {
             killCount++;
             if (killCount >= 3) {
               renderMessage("clearMessage");
-              restartGame("You Won!!!! GAME OVER!!!");
+              restartGame("You Won YAY!!! GAME OVER!!!");
               dogHowlWon.play();
               // The following line will play the imperial march:
               setTimeout(function() {
@@ -210,7 +208,7 @@ $(document).ready(function() {
           turnCounter++;
         } else {
           renderMessage("clearMessage");
-          renderMessage("No enemy here.");
+          renderMessage("No doggy here.");
           sniffSniff.play();
         }
       });

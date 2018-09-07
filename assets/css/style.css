@@ -13,9 +13,11 @@ body {
 }
 
 header {
-    font-size: 50px;
+    font-family: "Monoton";
+    font-size: 60px;
     text-align: center;
     padding: 20px;
+    margin-top: 30px;
     color: white;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
@@ -61,6 +63,7 @@ header {
     text-transform: capitalize;
     line-height: 30px;
     font-size: 20px;
+    font-family: "Indie Flower";
     color: white;
     background: rgba(0, 0, 0, 0.425);
     border-radius: 40%;
@@ -69,6 +72,7 @@ header {
 }
 .character-health {
     text-align: center;
+    font-family: "Indie Flower";    
     color: white;
 }
 
