@@ -1,11 +1,11 @@
 # Dog Park RPG
-UT Austin Coding Bootcamp | Unit 4 jQuery role-playing game
-[https://playeasynow.github.io/Dog-Park-RPG/](https://playeasynow.github.io/Dog-Park-RPG/)
-V1.0
+UT Austin Coding Bootcamp | Unit 4 jQuery role-playing game \
+[https://playeasynow.github.io/Dog-Park-RPG/](https://playeasynow.github.io/Dog-Park-RPG/) \
+V1.0 \
 Orig. Deployment - September 6, 2018
 
 # Idea
-Our first RPG and it's based in jQuery. Yay! The demo given to us was a Star Wars based RPG... I've never really seen the entire series (hard to admit!), so I decided to go into another direction: greedy dogs! These dogs are competitive for their space, especially when it's Dolores Park in San Francisco.\
+Our first RPG and it's based in jQuery. Yay! The demo given to us was a Star Wars based RPG... I've never really seen the entire series (hard to admit!), so I decided to go into another direction: greedy dogs! These dogs are competitive for their space, especially when it's Dolores Park in San Francisco.
 
 # Get Started
 Here's how the app works:
