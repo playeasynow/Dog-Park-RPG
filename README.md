@@ -8,6 +8,8 @@ Orig. Deployment - September 6, 2018
 Our first RPG and it's based in jQuery. Yay! The demo given to us was a Star Wars based RPG... I've never really seen the entire series (hard to admit!), so I decided to go into another direction: greedy dogs! These dogs are competitive for their space, especially when it's Dolores Park in San Francisco.
 
 # User Guide
+![Image of Dog Park](./assets/images/gameShot.png)
+
 Here's how it works:
 
 - The game starts when the player chooses a character by clicking on a dog's picture. The player will fight as that dog for the rest of the game.
