@@ -1,4 +1,4 @@
-# Dog Park RPG
+# Dog Park RPG :dog: :dog2: :dog:
 UT Austin Coding Bootcamp | Unit 4 jQuery role-playing game \
 [https://playeasynow.github.io/Dog-Park-RPG/](https://playeasynow.github.io/Dog-Park-RPG/) \
 V1.0 \
