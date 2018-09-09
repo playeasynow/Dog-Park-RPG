@@ -31,8 +31,7 @@ Bootstrap v4 - <https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap
 jQuery 3.x - <http://code.jquery.com/jquery-3.3.1.min.js> 
 
 # Original Contributors:
-Ezequiel Calderon (current edition and ongoing maintenance) - <https://github.com/playeasynow> \
-Edna Jonnson (starting source code) - <https://github.com/Ednas> 
+Ezequiel Calderon (current edition and ongoing maintenance) - <https://github.com/playeasynow>
 
 # Get Involved!
 If you have any recommendations, let me know! Email: ezequiel.calderon.jr@gmail.com. If you'd like to take it in your own direction, go right ahead. 
