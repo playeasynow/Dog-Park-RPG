@@ -28,7 +28,7 @@ The game uses basic jQuery methods, so is a fun way to practice your first RPG!
 
 # Built Utilizing: 
 Bootstrap v4 - <https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css> \
-jQuery 3.x - <http://code.jquery.com/jquery-3.3.1.min.js> \
+jQuery 3.x - <http://code.jquery.com/jquery-3.3.1.min.js> 
 
 # Original Contributors:
 Ezequiel Calderon (current edition and ongoing maintenance) - <https://github.com/playeasynow> \
