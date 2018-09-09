@@ -23,3 +23,16 @@ Here's how it works:
   - When the defender's HP is reduced to zero or below, the enemy dog will be removed from the defender area. The player dog can now choose a new opponent.
 - The player wins the game by defeating all enemy dogs. The player loses the game if their dog's HP falls to zero or below.
 - Have fun!
+
+The game uses basic jQuery methods, so is a fun way to practice your first RPG!
+
+# Built Utilizing: 
+Bootstrap v4 - <https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css> \
+jQuery 3.x - <http://code.jquery.com/jquery-3.3.1.min.js> \
+
+# Original Contributors:
+Ezequiel Calderon (current edition and ongoing maintenance) - <https://github.com/playeasynow> \
+Edna Jonnson (starting source code) - <https://github.com/Ednas> \
+
+# Get Involved!
+If you have any recommendations, let me know! You can find my email on my GitHub profile. If you'd like to take it in your own direction, go right ahead. 
