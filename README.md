@@ -35,4 +35,4 @@ Ezequiel Calderon (current edition and ongoing maintenance) - <https://github.co
 Edna Jonnson (starting source code) - <https://github.com/Ednas> 
 
 # Get Involved!
-If you have any recommendations, let me know! You can find my email on my GitHub profile. If you'd like to take it in your own direction, go right ahead. 
+If you have any recommendations, let me know! Email: ezequiel.calderon.jr@gmail.com. If you'd like to take it in your own direction, go right ahead. 
